@@ -6,6 +6,7 @@ import androidx.activity.compose.setContent
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
@@ -53,6 +54,15 @@ class MainActivity : ComponentActivity() {
         )
     }
 
+    @Composable
+    fun MyComponents(){
+        Row(modifier = Modifier.padding(8.dp)) {
+            MyImage()
+            MyTexts()
+        }
+    }
+
+
     //  JPC usa mayúsculas para nombrar funciones
     @Composable //  Elemento visual que voy a querer mostrar en la interfaz para el usuario
     fun MyText(text:String){
@@ -63,8 +73,6 @@ class MainActivity : ComponentActivity() {
     @Preview
     @Composable
     fun PreviewComponents(){
-
-        MyImage()
-        MyTexts()
+        MyComponents()
     }
 }

@@ -16,28 +16,21 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            DAM2jetpack_composeTheme {
-                // A surface container using the 'background' color from the theme
-                Surface(modifier = Modifier.fillMaxSize(), color = MaterialTheme.colorScheme.background) {
-                    Greeting("Android")
-                }
-            }
+            MyText(text = "Hola mundo")
+            MyText(text = "Estamos desde UCES")
         }
     }
-}
 
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-            text = "Hello $name!",
-            modifier = modifier
-    )
-}
+    //  JPC usa mayúsculas para nombrar funciones
+    @Composable //  Elemento visual que voy a querer mostrar en la interfaz para el usuario
+    fun MyText(text:String){
+        Text(text = text)
+    }
 
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    DAM2jetpack_composeTheme {
-        Greeting("Android")
+
+    @Preview
+    @Composable
+    fun PreviewComponents(){
+        MyText(text = "Hola mundo de prueba")
     }
 }

@@ -28,8 +28,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         //  Esto es lo que yo veo en mi app cuando buildee
         setContent {
-            MyText(text = "Hola mundo")
-            MyText(text = "Estamos desde UCES")
+            MyComponents()
         }
     }
 
